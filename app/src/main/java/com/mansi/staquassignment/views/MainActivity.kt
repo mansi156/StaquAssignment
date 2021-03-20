@@ -58,8 +58,13 @@ class MainActivity : AppCompatActivity(), UnAnsweredListAdapter.ItemListener{
             if(it!= null){
                 unAnsweredListAdapter.setUnAnsweredLIstData(ArrayList(it))
                 unAnsweredListAdapter.notifyDataSetChanged()
-                activityMainBinding.shimmerFrameLayout.visibility = View.GONE
+                activityMainBinding.itemsRv.visibility = View.VISIBLE
                 activityMainBinding.shimmerFrameLayout.stopShimmerAnimation()
+
+                activityMainBinding.shimmerFrameLayout.visibility = View.GONE
+                activityMainBinding.gifImage.visibility = View.GONE
+                activityMainBinding.somethingWentWrongText.visibility = View.GONE
+                activityMainBinding.tryAgainText.visibility = View.GONE
             }else{
                 activityMainBinding.gifImage.visibility = View.VISIBLE
                 activityMainBinding.somethingWentWrongText.visibility = View.VISIBLE
